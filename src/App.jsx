@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from 'styled-components';
+import { Outlet } from 'react-router-dom';
+import { GlobalStyle } from './globalStyle';
+
+const BackGroundColor = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+`;
+
+const Wrapper = styled.div`
+  flex-grow: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  /* font-family: Pretendard; */
+  color: black;
+  box-shadow: 0px 0px 10px 0px rgba(41, 41, 41, 0.25);
+`;
+
+const Content = styled.div`
+  flex-grow: 1;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 52px;
+`;
+
+const Layout = () => {
+  return (
+    <BackGroundColor>
+      <Wrapper>
+        <Content>
+          <Outlet />
+        </Content>
+      </Wrapper>
+    </BackGroundColor>
+  );
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GlobalStyle />
+      <Layout />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
