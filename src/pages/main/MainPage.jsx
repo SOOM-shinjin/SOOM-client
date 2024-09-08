@@ -36,7 +36,7 @@ const MainPage = () => {
           <S.RecommendedCourseWrapper>
             <S.TitleWrapper>
               <S.Title>추천 여행 코스</S.Title>
-              <S.More>더보기</S.More>
+              <S.More to={'/course'}>더보기</S.More>
             </S.TitleWrapper>
 
             <S.RecommendedCourseGrid>
@@ -93,7 +93,7 @@ const MainPage = () => {
         <S.SlideWrapper>
           <S.TitleWrapper>
             <S.Title>PLACE 정보 보기</S.Title>
-            <S.More>더보기</S.More>
+            <S.More to="/place">더보기</S.More>
           </S.TitleWrapper>
 
           <S.MySwiper

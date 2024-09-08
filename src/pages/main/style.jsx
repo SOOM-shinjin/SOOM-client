@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Swiper } from 'swiper/react';
 
@@ -102,13 +103,17 @@ export const Title = styled.div`
   margin-bottom: 16px;
 `;
 
-export const More = styled.div`
+export const More = styled(Link)`
   color: #626262;
   text-align: center;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+
+  &:hover {
+    color: #000;
+  }
 `;
 
 export const AiourseWrapper = styled.div`
