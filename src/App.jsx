@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import { GlobalStyle } from './globalStyle';
+import Navbar from './components/layout/navbar/Navbar';
 
 const BackGroundColor = styled.div`
   width: 100vw;
@@ -44,6 +45,7 @@ const Layout = () => {
         <Content>
           <Outlet />
         </Content>
+        <Navbar />
       </Wrapper>
     </BackGroundColor>
   );
