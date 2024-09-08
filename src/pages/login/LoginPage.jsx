@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './style';
 import LogoImg from '../../../public/images/mainLogo.png';
-import KakaoImg from '../../../public/images/kakao.png';
+import KakaoImg from '../../../public/images/login/kakao.png';
 
 const LoginPage = () => {
   return (
