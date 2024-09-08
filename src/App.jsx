@@ -31,8 +31,10 @@ const Content = styled.div`
   min-height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  padding-top: 52px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 `;
 
 const Layout = () => {
